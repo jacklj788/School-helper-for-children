@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +21,7 @@ namespace schoolHelperForChildren
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        Student student1;
         {
             InitializeComponent();
         }
@@ -32,6 +33,25 @@ namespace schoolHelperForChildren
             nameTxtbox.Text = "";
         }
 
+        private void nameBtn_Click(object sender, RoutedEventArgs e)
+        {
 
+            /*
+            tries to write to the file, otherwise catches it so it doesn't crash.
+            try
+            {
+                // Located in bin > Debug 
+                // Writes the persons name into the notepad file to store.
+                using (StreamWriter writer = new StreamWriter("UserData.txt"))
+                {
+                    writer.Write(nameTxtbox.Text);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something went wrong!");
+            }
+            */
+        }
     }
 }
