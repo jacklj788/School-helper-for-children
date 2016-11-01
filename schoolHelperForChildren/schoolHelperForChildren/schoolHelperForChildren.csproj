@@ -102,7 +102,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="User_information\UserData.txt" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\blackBoard.png" />
   </ItemGroup>

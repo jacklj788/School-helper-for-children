@@ -23,7 +23,15 @@ namespace schoolHelperForChildren
         public MainWindow()
         {
             InitializeComponent();
-
         }
+
+        // GotFocus = first time it is clicked / interacted with 
+        private void nameTxtbox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            // Clears the textbox
+            nameTxtbox.Text = "";
+        }
+
+
     }
 }
