@@ -21,7 +21,8 @@ namespace schoolHelperForChildren
     /// </summary>
     public partial class MainWindow : Window
     {
-        Student student1;
+        //Student student1 = new Student();
+        public MainWindow()
         {
             InitializeComponent();
         }
@@ -35,23 +36,23 @@ namespace schoolHelperForChildren
 
         private void nameBtn_Click(object sender, RoutedEventArgs e)
         {
-
-            /*
-            tries to write to the file, otherwise catches it so it doesn't crash.
             try
             {
                 // Located in bin > Debug 
                 // Writes the persons name into the notepad file to store.
                 using (StreamWriter writer = new StreamWriter("UserData.txt"))
                 {
-                    writer.Write(nameTxtbox.Text);
+                    writer.WriteLine(nameTxtbox.Text);
                 }
+                
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Something went wrong!");
             }
-            */
+            // Moved this down here otherwise it would run the Reader before doing the Writer
+            SubjectSelection subjectTopic = new SubjectSelection();
+            this.Content = subjectTopic;
         }
     }
 }
