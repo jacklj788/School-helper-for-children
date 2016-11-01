@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,20 +16,13 @@ using System.Windows.Shapes;
 namespace schoolHelperForChildren
 {
     /// <summary>
-    /// Interaction logic for SubjectSelection.xaml
+    /// Interaction logic for MathQuiz.xaml
     /// </summary>
-    public partial class SubjectSelection : UserControl
+    public partial class MathQuiz : UserControl
     {
-        public SubjectSelection()
+        public MathQuiz()
         {
             InitializeComponent();
-
-            string line;
-            using (StreamReader reader = new StreamReader("UserData.txt"))
-            {
-                line = reader.ReadLine();
-            }
-            nameLbl.Content = ("Hello " + line);
         }
     }
 }

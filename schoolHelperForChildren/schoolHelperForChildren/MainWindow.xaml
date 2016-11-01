@@ -10,7 +10,7 @@
         <ImageBrush ImageSource="Images\blackBoard.png" />
     </Window.Background>
     <Grid HorizontalAlignment="Left" Height="280" Margin="24,304,0,0" VerticalAlignment="Top" Width="883">
-        <TextBox x:Name="nameTxtbox" HorizontalAlignment="Left" Height="58" Margin="227,74,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="420" GotFocus="nameTxtbox_GotFocus"/>
+        <TextBox x:Name="nameTxtbox" HorizontalAlignment="Left" Height="58" Margin="227,74,0,0" TextWrapping="Wrap" Text="Click here.." VerticalAlignment="Top" Width="420" GotFocus="nameTxtbox_GotFocus" FontSize="35"/>
         <Button x:Name="nameBtn" Content="Submit Name" HorizontalAlignment="Left" Margin="369,137,0,0" VerticalAlignment="Top" Width="121" Height="62" Click="nameBtn_Click"/>
     </Grid>
 
