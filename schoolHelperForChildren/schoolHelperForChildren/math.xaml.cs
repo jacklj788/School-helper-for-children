@@ -28,6 +28,7 @@ namespace schoolHelperForChildren
         private void button_Click(object sender, RoutedEventArgs e)
         {
             //Test code - Does this work?
+            // hello
         }
     }
 }

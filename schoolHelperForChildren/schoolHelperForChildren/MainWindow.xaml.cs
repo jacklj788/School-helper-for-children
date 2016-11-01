@@ -23,6 +23,7 @@ namespace schoolHelperForChildren
         public MainWindow()
         {
             InitializeComponent();
+
         }
     }
 }
