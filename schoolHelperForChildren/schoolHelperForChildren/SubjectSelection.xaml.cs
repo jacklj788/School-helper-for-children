@@ -32,5 +32,12 @@ namespace schoolHelperForChildren
             }
             nameLbl.Content = ("Hello " + line);
         }
+
+        private void mathBtn_Click(object sender, RoutedEventArgs e)
+        {
+            // Changes the page to the Mathquiz page when the user selects it.
+            MathQuiz math = new MathQuiz();
+            this.Content = math;
+        }
     }
 }

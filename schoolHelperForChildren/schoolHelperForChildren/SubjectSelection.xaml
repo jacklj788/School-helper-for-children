@@ -10,7 +10,7 @@
         <ImageBrush ImageSource="Images\schoolDesk.png" />
     </UserControl.Background>
     <Grid>
-        <Button x:Name="mathBtn" Content="Math" HorizontalAlignment="Left" Margin="443,108,0,0" VerticalAlignment="Top" Width="98" Opacity="1" Background="Transparent" BorderBrush="Transparent" FontSize="30" Height="37"/>
+        <Button x:Name="mathBtn" Content="Math" HorizontalAlignment="Left" Margin="443,108,0,0" VerticalAlignment="Top" Width="98" Opacity="1" Background="Transparent" BorderBrush="Transparent" FontSize="30" Height="37" Click="mathBtn_Click"/>
         <Label x:Name="subjectLbl" Content="Select a subject to study!" HorizontalAlignment="Left" Margin="447,35,0,0" VerticalAlignment="Top" Height="38" Width="230" FontSize="20"/>
         <Label x:Name="nameLbl" Content="Filler" HorizontalAlignment="Left" Margin="21,28,0,0" VerticalAlignment="Top" FontFamily="Rockwell" FontSize="30"/>
 
