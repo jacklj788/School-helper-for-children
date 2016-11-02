@@ -5,11 +5,15 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:schoolHelperForChildren"
              mc:Ignorable="d" 
-             d:DesignHeight="640" d:DesignWidth="940">
+             d:DesignHeight="640" d:DesignWidth="980">
     <UserControl.Background>
         <ImageBrush ImageSource="Images\schoolDeskMath.png" />
     </UserControl.Background>
     <Grid>
-            
+        <Label x:Name="num1Lbl" Content="1" HorizontalAlignment="Left" Margin="498,73,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="num2Lbl" Content="2" HorizontalAlignment="Left" Margin="565,73,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="num3Lbl" Content="+" HorizontalAlignment="Left" Margin="529,70,0,0" VerticalAlignment="Top" FontSize="30" Height="52"/>
+        <TextBox x:Name="answerTxtbox" HorizontalAlignment="Left" Height="29" Margin="650,78,0,0" TextWrapping="Wrap" Text="Your Answer?" VerticalAlignment="Top" Width="145"/>
+
     </Grid>
 </UserControl>
