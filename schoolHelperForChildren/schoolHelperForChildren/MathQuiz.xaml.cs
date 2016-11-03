@@ -23,6 +23,21 @@ namespace schoolHelperForChildren
         public MathQuiz()
         {
             InitializeComponent();
+
+            Random rnd = new Random();
+
+            float[] numbers = new float[2];
+            // There will be half as many answers as numbers - it's 1 for now but will grow, which is why its an array
+            float[] answers = new float[1];
+
+            // Will put this in a foreach loop later - Declares the variables as random numbers between 1 and 45. 45 is a good max number for children 
+            numbers[0] = rnd.Next(1, 45);
+            numbers[1] = rnd.Next(1, 99);
+
+            answers[0] = numbers[0] + numbers[1];
+
+            num1Lbl.Content = numbers[0];
+            num2Lbl.Content = numbers[1];
         }
     }
 }
