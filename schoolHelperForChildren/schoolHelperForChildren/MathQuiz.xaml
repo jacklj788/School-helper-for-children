@@ -15,7 +15,8 @@
         <Label x:Name="operator1Lbl" Content="+" HorizontalAlignment="Left" Margin="527,68,0,0" VerticalAlignment="Top" FontSize="30" Height="52"/>
         <TextBox x:Name="answer1Txtbox" HorizontalAlignment="Left" Height="38" Margin="651,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" Background="Transparent" BorderBrush="Red" FontSize="30"/>
         <Label x:Name="equalsLbl" Content="=" HorizontalAlignment="Left" Margin="615,70,0,0" VerticalAlignment="Top" FontSize="30" Height="52"/>
-        <Button x:Name="submitAnswersTxtbox" Content="Check Answers" HorizontalAlignment="Left" Margin="751,514,0,0" VerticalAlignment="Top" Width="91" Height="37"/>
+        <Button x:Name="submitAnswersTxtbox" Content="Check Answers" HorizontalAlignment="Left" Margin="751,514,0,0" VerticalAlignment="Top" Width="91" Height="37" Click="submitAnswersTxtbox_Click"/>
+        <Label x:Name="label" Content="Label" HorizontalAlignment="Left" Margin="296,573,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
 
     </Grid>
 </UserControl>
