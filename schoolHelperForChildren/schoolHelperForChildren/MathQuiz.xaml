@@ -12,11 +12,21 @@
     <Grid>
         <Label x:Name="num1Lbl" Content="1" HorizontalAlignment="Left" Margin="490,70,0,0" VerticalAlignment="Top" FontSize="30"/>
         <Label x:Name="num2Lbl" Content="2" HorizontalAlignment="Left" Margin="565,70,0,0" VerticalAlignment="Top" FontSize="30"/>
-        <Label x:Name="operator1Lbl" Content="+" HorizontalAlignment="Left" Margin="527,68,0,0" VerticalAlignment="Top" FontSize="30" Height="52"/>
+        <Label x:Name="operator1Lbl" Content="+" HorizontalAlignment="Left" Margin="530,68,0,0" VerticalAlignment="Top" FontSize="30" Height="52"/>
         <TextBox x:Name="answer1Txtbox" HorizontalAlignment="Left" Height="38" Margin="651,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" Background="Transparent" BorderBrush="Red" FontSize="30"/>
         <Label x:Name="equalsLbl" Content="=" HorizontalAlignment="Left" Margin="615,70,0,0" VerticalAlignment="Top" FontSize="30" Height="52"/>
         <Button x:Name="submitAnswersTxtbox" Content="Check Answers" HorizontalAlignment="Left" Margin="751,514,0,0" VerticalAlignment="Top" Width="91" Height="37" Click="submitAnswersTxtbox_Click"/>
         <Label x:Name="label" Content="Label" HorizontalAlignment="Left" Margin="296,573,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="num3Lbl" Content="1" HorizontalAlignment="Left" Margin="490,107,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="num4Lbl" Content="2" HorizontalAlignment="Left" Margin="565,107,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="operator2" Content="+" HorizontalAlignment="Left" Margin="530,105,0,0" VerticalAlignment="Top" FontSize="30" Height="52"/>
+        <TextBox x:Name="answer2Txtbox" HorizontalAlignment="Left" Height="38" Margin="651,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" Background="Transparent" BorderBrush="Red" FontSize="30"/>
+        <Label x:Name="equalsLbl_Copy" Content="=" HorizontalAlignment="Left" Margin="615,107,0,0" VerticalAlignment="Top" FontSize="30" Height="52"/>
+        <Label x:Name="num5Lbl" Content="1" HorizontalAlignment="Left" Margin="490,140,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="num6Lbl" Content="2" HorizontalAlignment="Left" Margin="565,140,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="operator3" Content="+" HorizontalAlignment="Left" Margin="530,138,0,0" VerticalAlignment="Top" FontSize="30" Height="52"/>
+        <TextBox x:Name="answer3Txtbox" HorizontalAlignment="Left" Height="38" Margin="651,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" Background="Transparent" BorderBrush="Red" FontSize="30"/>
+        <Label x:Name="equalsLbl_Copy1" Content="=" HorizontalAlignment="Left" Margin="615,138,0,0" VerticalAlignment="Top" FontSize="30" Height="52"/>
 
     </Grid>
 </UserControl>

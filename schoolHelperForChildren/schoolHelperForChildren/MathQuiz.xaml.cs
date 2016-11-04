@@ -20,24 +20,37 @@ namespace schoolHelperForChildren
     /// </summary>
     public partial class MathQuiz : UserControl
     {
-        double[] answers = new double[1];
+        // There will be half as many answers as numbers - it's 1 for now but will grow, which is why its an array
+        // Its in the class but outside of the constructor so all functions can access it
+        double[] answers = new double[3];
         public MathQuiz()
         {
             InitializeComponent();
 
             Random rnd = new Random();
 
-            double[] numbers = new double[2];
-            // There will be half as many answers as numbers - it's 1 for now but will grow, which is why its an array
+            double[] numbers = new double[6];
 
             // Will put this in a foreach loop later - Declares the variables as random numbers between 1 and 45. 45 is a good max number for children 
-            numbers[0] = rnd.Next(1, 45);
-            numbers[1] = rnd.Next(1, 45);
+            int i = 0;
+            foreach (double d in numbers)
+            {
+                numbers[i] = rnd.Next(1, 45);
+                // this is the one drawback with foreach loops. Can't use [d] because it's a double not an int. 
+                i++;
+            }
+            //numbers[0] = rnd.Next(1, 45);
+            //numbers[1] = rnd.Next(1, 45);
 
             answers[0] = (numbers[0] + numbers[1]);
 
+            // need to think of a better way to do this. How do I put these labels into an array or something of the sort.
             num1Lbl.Content = numbers[0];
             num2Lbl.Content = numbers[1];
+            num3Lbl.Content = numbers[2];
+            num4Lbl.Content = numbers[3];
+            num5Lbl.Content = numbers[4];
+            num6Lbl.Content = numbers[5];
         }
 
         private void submitAnswersTxtbox_Click(object sender, RoutedEventArgs e)
