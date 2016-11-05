@@ -35,12 +35,15 @@ namespace schoolHelperForChildren
             int i = 0;
             foreach (double d in numbers)
             {
+                // DEBUGGING - These are all being populated correctly
                 numbers[i] = rnd.Next(1, 45);
                 // this is the one drawback with foreach loops. Can't use [d] because it's a double not an int. 
                 i++;
             }
 
+
             // Need a nicer way for this too
+            // DEBUGGING - These are all correctly being populated 
             answers[0] = (numbers[0] + numbers[1]);
             answers[1] = (numbers[2] + numbers[3]);
             answers[2] = (numbers[4] + numbers[5]);
@@ -60,26 +63,36 @@ namespace schoolHelperForChildren
             double[] textBoxToNumber = new double[3];
             int i = 0;
             int score = 0;
+            // works correctly
             foreach (double d in textBoxToNumber)
             {
                 // Converts the string content into a double
                 textBoxToNumber[i] = Convert.ToDouble(answers[i]);
-                if (textBoxToNumber[i] == answers[i])
-                {
-                    score++;
-                }
-                // 
-                if (score >= 2)
-                {
-                    label.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    // Being designed for children so we need to watch our language tone, can't just tell them they failed, that's not reinforcing. 
-                    Console.WriteLine("Almost! try again and you'll get it done!");
-                }
                 i++;
-               
+            }
+
+            int j = 0;
+
+            foreach (double d in textBoxToNumber)
+            {
+                // DEBUG - These are the same values ? They shouldn't be as I input 0 - Logical error on my end. 
+                if (textBoxToNumber[j] == answers[j])
+                {
+                    // DEBUGGING - Score is not updating 
+                    score++;
+                    j++;
+                }
+            }
+
+            // score equals 3 !!! Figured out my error. I'm checking if the answer is equal to the answer (which it obviously is) not if it is equal to what the user is guessing 
+            if (score >= 2)
+            {
+                label.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                // Being designed for children so we need to watch our language tone, can't just tell them they failed, that's not reinforcing. 
+                Console.WriteLine("Almost! try again and you'll get it done!");
             }
         }
     }
