@@ -63,6 +63,9 @@
     <Compile Include="SubjectSelection.xaml.cs">
       <DependentUpon>SubjectSelection.xaml</DependentUpon>
     </Compile>
+    <Compile Include="YourResult!.xaml.cs">
+      <DependentUpon>YourResult!.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -80,6 +83,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SubjectSelection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="YourResult!.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

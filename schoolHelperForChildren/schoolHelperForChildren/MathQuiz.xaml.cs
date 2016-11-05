@@ -28,7 +28,7 @@ namespace schoolHelperForChildren
             InitializeComponent();
 
             Random rnd = new Random();
-
+            // Doubles because division might require it
             double[] numbers = new double[6];
 
             // Will put this in a foreach loop later - Declares the variables as random numbers between 1 and 45. 45 is a good max number for children 
@@ -39,10 +39,11 @@ namespace schoolHelperForChildren
                 // this is the one drawback with foreach loops. Can't use [d] because it's a double not an int. 
                 i++;
             }
-            //numbers[0] = rnd.Next(1, 45);
-            //numbers[1] = rnd.Next(1, 45);
 
+            // Need a nicer way for this too
             answers[0] = (numbers[0] + numbers[1]);
+            answers[1] = (numbers[2] + numbers[3]);
+            answers[2] = (numbers[4] + numbers[5]);
 
             // need to think of a better way to do this. How do I put these labels into an array or something of the sort.
             num1Lbl.Content = numbers[0];
@@ -56,11 +57,29 @@ namespace schoolHelperForChildren
         private void submitAnswersTxtbox_Click(object sender, RoutedEventArgs e)
         {
             // Floats werent working as float parsing was breaking, but double converting is fine. 
-            double textBoxToNumber = Convert.ToDouble(answers[0]);
-            //num1Lbl.Content = textBoxToNumber;
-            if (textBoxToNumber == answers[0])
+            double[] textBoxToNumber = new double[3];
+            int i = 0;
+            int score = 0;
+            foreach (double d in textBoxToNumber)
             {
-                label.Visibility = Visibility.Visible;
+                // Converts the string content into a double
+                textBoxToNumber[i] = Convert.ToDouble(answers[i]);
+                if (textBoxToNumber[i] == answers[i])
+                {
+                    score++;
+                }
+                // 
+                if (score >= 2)
+                {
+                    label.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    // Being designed for children so we need to watch our language tone, can't just tell them they failed, that's not reinforcing. 
+                    Console.WriteLine("Almost! try again and you'll get it done!");
+                }
+                i++;
+               
             }
         }
     }
