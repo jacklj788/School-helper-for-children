@@ -20,20 +20,30 @@ namespace schoolHelperForChildren
     {
         // There will be half as many answers as numbers - it's 1 for now but will grow, which is why its an array
         // Its in the class but outside of the constructor so all functions can access it
-        double[] answers = new double[3];
+        double[] answers = new double[4];
         public MathQuiz()
         {
             InitializeComponent();
 
             Random rnd = new Random();
             // Doubles because division might require it
-            double[] numbers = new double[6];
+            double[] numbers = new double[8];
+
+            List<Label> lblList = new List<Label>();
+            // Better way to do this? Don't think there is sadly. 
+            lblList.Add(num1Lbl);
+            lblList.Add(num2Lbl);
+            lblList.Add(num3Lbl);
+            lblList.Add(num4Lbl);
+            lblList.Add(num5Lbl);
+            lblList.Add(num6Lbl);
+            lblList.Add(num7Lbl);
+            lblList.Add(num8Lbl);
 
             // Will put this in a foreach loop later - Declares the variables as random numbers between 1 and 45. 45 is a good max number for children 
             int i = 0;
             foreach (double d in numbers)
             {
-                // DEBUGGING - These are all being populated correctly
                 numbers[i] = rnd.Next(1, 45);
                 // this is the one drawback with foreach loops. Can't use [d] because it's a double not an int. 
                 i++;
@@ -41,18 +51,20 @@ namespace schoolHelperForChildren
 
 
             // Need a nicer way for this too
-            // DEBUGGING - These are all correctly being populated 
+            // addition
             answers[0] = (numbers[0] + numbers[1]);
             answers[1] = (numbers[2] + numbers[3]);
             answers[2] = (numbers[4] + numbers[5]);
+            // minus
+            answers[2] = (numbers[6] - numbers[7]);
 
-            // need to think of a better way to do this. How do I put these labels into an array or something of the sort.
-            num1Lbl.Content = numbers[0];
-            num2Lbl.Content = numbers[1];
-            num3Lbl.Content = numbers[2];
-            num4Lbl.Content = numbers[3];
-            num5Lbl.Content = numbers[4];
-            num6Lbl.Content = numbers[5];
+            // numLoop = makes sure it populates the next array slot each time
+            int numLoop = 0;
+            foreach(Label l in lblList)
+            {
+                l.Content = numbers[numLoop];
+                numLoop++;
+            }
         }
 
         private void submitAnswersTxtbox_Click(object sender, RoutedEventArgs e)
@@ -82,7 +94,6 @@ namespace schoolHelperForChildren
                 }
             }
        
-            // DEBUG - change this value in the future!! Aim for them to require 70-80% correct. 
             if (score > 1)
             {
                 // Just here so i know it's working. The label is useless though. 
