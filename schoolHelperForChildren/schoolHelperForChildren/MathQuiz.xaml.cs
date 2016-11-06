@@ -30,7 +30,7 @@ namespace schoolHelperForChildren
             double[] numbers = new double[8];
 
             List<Label> lblList = new List<Label>();
-            // Better way to do this? Don't think there is sadly. 
+            // Better way to do this? Don't think there is sadly. But it's better this than it was before because now I can do foreach loops
             lblList.Add(num1Lbl);
             lblList.Add(num2Lbl);
             lblList.Add(num3Lbl);
@@ -42,21 +42,18 @@ namespace schoolHelperForChildren
 
             // Will put this in a foreach loop later - Declares the variables as random numbers between 1 and 45. 45 is a good max number for children 
             int i = 0;
-            foreach (double d in numbers)
+            foreach (double equationNumbers in numbers)
             {
                 numbers[i] = rnd.Next(1, 45);
                 // this is the one drawback with foreach loops. Can't use [d] because it's a double not an int. 
                 i++;
             }
 
-
-            // Need a nicer way for this too
-            // addition
             answers[0] = (numbers[0] + numbers[1]);
             answers[1] = (numbers[2] + numbers[3]);
             answers[2] = (numbers[4] + numbers[5]);
             // minus
-            answers[2] = (numbers[6] - numbers[7]);
+            answers[3] = (numbers[6] - numbers[7]);
 
             // numLoop = makes sure it populates the next array slot each time
             int numLoop = 0;
@@ -70,7 +67,7 @@ namespace schoolHelperForChildren
         private void submitAnswersTxtbox_Click(object sender, RoutedEventArgs e)
         {
             // Floats werent working as float parsing was breaking, but double converting is fine. 
-            double[] textBoxToNumber = new double[3];
+            double[] textBoxToNumber = new double[4];
             int i = 0;
             int score = 0;
             // Converts the textbox content from a string to a double
@@ -79,6 +76,7 @@ namespace schoolHelperForChildren
                 textBoxToNumber[0] = Convert.ToDouble(answer1Txtbox.Text);
                 textBoxToNumber[1] = Convert.ToDouble(answer2Txtbox.Text);
                 textBoxToNumber[2] = Convert.ToDouble(answer3Txtbox.Text);
+                textBoxToNumber[3] = Convert.ToDouble(answer4Txtbox.Text);
             }
             catch (Exception failedToConvert)
             {
@@ -94,7 +92,7 @@ namespace schoolHelperForChildren
                 }
             }
        
-            if (score > 1)
+            if (score > 2)
             {
                 // Just here so i know it's working. The label is useless though. 
                 label.Visibility = Visibility.Visible;
