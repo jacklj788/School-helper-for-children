@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Diagnostics;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -63,30 +64,31 @@ namespace schoolHelperForChildren
             double[] textBoxToNumber = new double[3];
             int i = 0;
             int score = 0;
-            // works correctly
-            foreach (double d in textBoxToNumber)
+            // Converts the textbox content from a string to a double
+            try
             {
-                // Converts the string content into a double
-                textBoxToNumber[i] = Convert.ToDouble(answers[i]);
-                i++;
+                textBoxToNumber[0] = Convert.ToDouble(answer1Txtbox.Text);
+                textBoxToNumber[1] = Convert.ToDouble(answer2Txtbox.Text);
+                textBoxToNumber[2] = Convert.ToDouble(answer3Txtbox.Text);
+            }
+            catch (Exception failedToConvert)
+            {
+                MessageBox.Show("You forgot to answer a question!\nJust take a guess if you don't know, it's better than leaving it blank.");
             }
 
-            int j = 0;
-
-            foreach (double d in textBoxToNumber)
+            foreach (double a in answers)
             {
-                // DEBUG - These are the same values ? They shouldn't be as I input 0 - Logical error on my end. 
-                if (textBoxToNumber[j] == answers[j])
+                if (textBoxToNumber[i] == answers[i])
                 {
-                    // DEBUGGING - Score is not updating 
+                    i++;
                     score++;
-                    j++;
                 }
             }
-
-            // score equals 3 !!! Figured out my error. I'm checking if the answer is equal to the answer (which it obviously is) not if it is equal to what the user is guessing 
-            if (score >= 2)
+       
+            // DEBUG - change this value in the future!! Aim for them to require 70-80% correct. 
+            if (score > 1)
             {
+                // Just here so i know it's working. The label is useless though. 
                 label.Visibility = Visibility.Visible;
             }
             else
