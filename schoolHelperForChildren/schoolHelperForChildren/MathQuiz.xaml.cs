@@ -7,7 +7,6 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
-using System.Diagnostics;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -16,9 +15,7 @@ using System.Windows.Shapes;
 
 namespace schoolHelperForChildren
 {
-    /// <summary>
-    /// Interaction logic for MathQuiz.xaml
-    /// </summary>
+    
     public partial class MathQuiz : UserControl
     {
         // There will be half as many answers as numbers - it's 1 for now but will grow, which is why its an array

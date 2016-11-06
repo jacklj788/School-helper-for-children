@@ -27,6 +27,11 @@
         <Label x:Name="operator3" Content="+" HorizontalAlignment="Left" Margin="530,138,0,0" VerticalAlignment="Top" FontSize="30" Height="52"/>
         <TextBox x:Name="answer3Txtbox" HorizontalAlignment="Left" Height="38" Margin="651,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" Background="Transparent" BorderBrush="Red" FontSize="30"/>
         <Label x:Name="equalsLbl_Copy1" Content="=" HorizontalAlignment="Left" Margin="615,138,0,0" VerticalAlignment="Top" FontSize="30" Height="52"/>
+        <Label x:Name="num7Lbl" Content="7" HorizontalAlignment="Left" Margin="490,181,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="num8Lbl" Content="8" HorizontalAlignment="Left" Margin="565,181,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="operator3_Copy" Content="-" HorizontalAlignment="Left" Margin="530,179,0,0" VerticalAlignment="Top" FontSize="30" Height="52"/>
+        <Label x:Name="equalsLbl_Copy2" Content="=" HorizontalAlignment="Left" Margin="615,179,0,0" VerticalAlignment="Top" FontSize="30" Height="52"/>
+        <TextBox x:Name="answer3Txtbox_Copy" HorizontalAlignment="Left" Height="38" Margin="651,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" Background="Transparent" BorderBrush="Red" FontSize="30"/>
 
     </Grid>
 </UserControl>
