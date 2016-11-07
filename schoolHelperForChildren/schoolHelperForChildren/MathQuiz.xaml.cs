@@ -78,6 +78,8 @@ namespace schoolHelperForChildren
             // Converts the textbox content from a string to a double
             try
             {
+                // If these are empty, it won't work. This is the issue with Try catching, it isn't making sure there is a value.
+                // If no value it skips it. Breaking the score system as it compares i to i (1 to 1) but what is 1 is null? weird.
                 textBoxToNumber[0] = Convert.ToDouble(answer1Txtbox.Text);
                 textBoxToNumber[1] = Convert.ToDouble(answer2Txtbox.Text);
                 textBoxToNumber[2] = Convert.ToDouble(answer3Txtbox.Text);
@@ -100,9 +102,9 @@ namespace schoolHelperForChildren
                 i++;
             }
 
-            MessageBox.Show(String.Format("{0}", score));
+            //MessageBox.Show(String.Format("{0}", score));
             // Commented out while I debug since it gets annoying! 
-            /*if (score > 3)
+            if (score > 3)
             {
                 // Just here so i know it's working. The label is useless though. 
                 MessageBox.Show(String.Format("{0}", score));
@@ -113,7 +115,7 @@ namespace schoolHelperForChildren
                 // Being designed for children so we need to watch our language tone, can't just tell them they failed, that's not reinforcing. 
                 MessageBox.Show(String.Format("{0}", score));
                 //MessageBox.Show(String.Format("You only scored {0} / 5 correct. Try again.", score));
-            }*/
+            }
         }
 
         private void returnBtn_Click(object sender, RoutedEventArgs e)
