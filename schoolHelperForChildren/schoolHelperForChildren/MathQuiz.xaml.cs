@@ -20,14 +20,14 @@ namespace schoolHelperForChildren
     {
         // There will be half as many answers as numbers - it's 1 for now but will grow, which is why its an array
         // Its in the class but outside of the constructor so all functions can access it
-        double[] answers = new double[4];
+        double[] answers = new double[5];
         public MathQuiz()
         {
             InitializeComponent();
 
             Random rnd = new Random();
             // Doubles because division might require it
-            double[] numbers = new double[8];
+            double[] numbers = new double[10];
 
             List<Label> lblList = new List<Label>();
             // Better way to do this? Don't think there is sadly. But it's better this than it was before because now I can do foreach loops
@@ -39,6 +39,8 @@ namespace schoolHelperForChildren
             lblList.Add(num6Lbl);
             lblList.Add(num7Lbl);
             lblList.Add(num8Lbl);
+            lblList.Add(num9Lbl);
+            lblList.Add(num10Lbl);
 
             // Will put this in a foreach loop later - Declares the variables as random numbers between 1 and 45. 45 is a good max number for children 
             int i = 0;
@@ -48,12 +50,14 @@ namespace schoolHelperForChildren
                 // this is the one drawback with foreach loops. Can't use [d] because it's a double not an int. 
                 i++;
             }
-
+            // add
             answers[0] = (numbers[0] + numbers[1]);
             answers[1] = (numbers[2] + numbers[3]);
             answers[2] = (numbers[4] + numbers[5]);
             // minus
             answers[3] = (numbers[6] - numbers[7]);
+            // multiply 
+            answers[4] = (numbers[8] * numbers[9]);
 
             // numLoop = makes sure it populates the next array slot each time
             int numLoop = 0;
@@ -67,7 +71,8 @@ namespace schoolHelperForChildren
         private void submitAnswersTxtbox_Click(object sender, RoutedEventArgs e)
         {
             // Floats werent working as float parsing was breaking, but double converting is fine. 
-            double[] textBoxToNumber = new double[4];
+            // Needs to be the same as how many text boxes there are (half the numbers).
+            double[] textBoxToNumber = new double[5];
             int i = 0;
             int score = 0;
             // Converts the textbox content from a string to a double
@@ -77,32 +82,38 @@ namespace schoolHelperForChildren
                 textBoxToNumber[1] = Convert.ToDouble(answer2Txtbox.Text);
                 textBoxToNumber[2] = Convert.ToDouble(answer3Txtbox.Text);
                 textBoxToNumber[3] = Convert.ToDouble(answer4Txtbox.Text);
+                textBoxToNumber[4] = Convert.ToDouble(answer5Txtbox.Text);
             }
             catch (Exception failedToConvert)
             {
-                MessageBox.Show("You forgot to answer a question!\nJust take a guess if you don't know, it's better than leaving it blank.");
+                //Commented out while i debug since it gets annoying!
+                //MessageBox.Show("You forgot to answer a question!\nJust take a guess if you don't know, it's better than leaving it blank.");
             }
 
             foreach (double a in answers)
             {
                 if (textBoxToNumber[i] == answers[i])
                 {
-                    i++;
                     score++;
                 }
+                // Moved this out of the code, it needs to update every time not just when it's correct. - Error still here. 
+                i++;
             }
-       
-            if (score > 2)
+
+            MessageBox.Show(String.Format("{0}", score));
+            // Commented out while I debug since it gets annoying! 
+            /*if (score > 3)
             {
                 // Just here so i know it's working. The label is useless though. 
-                MessageBox.Show(String.Format("You scored {0} / 4 correct!", score));
+                MessageBox.Show(String.Format("{0}", score));
+                //MessageBox.Show(String.Format("You scored {0} / 5 correct!", score));
             }
             else
             {
                 // Being designed for children so we need to watch our language tone, can't just tell them they failed, that's not reinforcing. 
-                MessageBox.Show(String.Format("You only scored {0} / 4 correct. Try again.", score));
-            }
-            
+                MessageBox.Show(String.Format("{0}", score));
+                //MessageBox.Show(String.Format("You only scored {0} / 5 correct. Try again.", score));
+            }*/
         }
 
         private void returnBtn_Click(object sender, RoutedEventArgs e)
