@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 
 namespace schoolHelperForChildren
 {
-    
+
     public partial class MathQuiz : UserControl
     {
         // There will be half as many answers as numbers - it's 1 for now but will grow, which is why its an array
@@ -61,7 +61,7 @@ namespace schoolHelperForChildren
 
             // numLoop = makes sure it populates the next array slot each time
             int numLoop = 0;
-            foreach(Label l in lblList)
+            foreach (Label l in lblList)
             {
                 l.Content = numbers[numLoop];
                 numLoop++;
@@ -75,6 +75,9 @@ namespace schoolHelperForChildren
             double[] textBoxToNumber = new double[5];
             int i = 0;
             int score = 0;
+            // This is the solution to my bug. This bool makes it so ONLY the message box saying "input values in each box" OR the score pops up. Not both. 
+            // This way the score won't show to the user that it isn't actually working. 
+            bool only1MessageBox;
             // Converts the textbox content from a string to a double
             try
             {
@@ -85,12 +88,17 @@ namespace schoolHelperForChildren
                 textBoxToNumber[2] = Convert.ToDouble(answer3Txtbox.Text);
                 textBoxToNumber[3] = Convert.ToDouble(answer4Txtbox.Text);
                 textBoxToNumber[4] = Convert.ToDouble(answer5Txtbox.Text);
+                only1MessageBox = false;
             }
             catch (Exception failedToConvert)
             {
                 //Commented out while i debug since it gets annoying!
-                //MessageBox.Show("You forgot to answer a question!\nJust take a guess if you don't know, it's better than leaving it blank.");
+                MessageBox.Show("You forgot to answer a question!\nJust take a guess if you don't know, it's better than leaving it blank.");
+                // It failed so we make it so only this message box shows.
+                only1MessageBox = true;
+
             }
+
 
             foreach (double a in answers)
             {
@@ -106,15 +114,20 @@ namespace schoolHelperForChildren
             // Commented out while I debug since it gets annoying! 
             if (score > 3)
             {
-                // Just here so i know it's working. The label is useless though. 
-                MessageBox.Show(String.Format("{0}", score));
-                //MessageBox.Show(String.Format("You scored {0} / 5 correct!", score));
+                // Is there another warning message box more important?
+                if (only1MessageBox == false)
+                {
+                    // If not then show the score
+                    MessageBox.Show(String.Format("You scored {0} / 5 correct!", score));
+                }
             }
             else
             {
                 // Being designed for children so we need to watch our language tone, can't just tell them they failed, that's not reinforcing. 
-                MessageBox.Show(String.Format("{0}", score));
-                //MessageBox.Show(String.Format("You only scored {0} / 5 correct. Try again.", score));
+                if (only1MessageBox == false)
+                {
+                    MessageBox.Show(String.Format("You only scored {0} / 5 correct. Try again.", score));
+                }
             }
         }
 
