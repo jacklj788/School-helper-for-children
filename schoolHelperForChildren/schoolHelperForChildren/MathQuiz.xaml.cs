@@ -95,13 +95,20 @@ namespace schoolHelperForChildren
             if (score > 2)
             {
                 // Just here so i know it's working. The label is useless though. 
-                label.Visibility = Visibility.Visible;
+                MessageBox.Show(String.Format("You scored {0} / 4 correct!", score));
             }
             else
             {
                 // Being designed for children so we need to watch our language tone, can't just tell them they failed, that's not reinforcing. 
-                Console.WriteLine("Almost! try again and you'll get it done!");
+                MessageBox.Show(String.Format("You only scored {0} / 4 correct. Try again.", score));
             }
+            
+        }
+
+        private void returnBtn_Click(object sender, RoutedEventArgs e)
+        {
+            SubjectSelection sS = new SubjectSelection();
+            this.Content = sS;
         }
     }
 }

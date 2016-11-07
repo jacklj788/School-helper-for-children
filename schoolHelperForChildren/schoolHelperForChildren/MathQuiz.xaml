@@ -32,6 +32,7 @@
         <Label x:Name="operator3_Copy" Content="-" HorizontalAlignment="Left" Margin="534,206,0,0" VerticalAlignment="Top" FontSize="30" Height="52"/>
         <Label x:Name="minusLbl" Content="=" HorizontalAlignment="Left" Margin="615,205,0,0" VerticalAlignment="Top" FontSize="30" Height="52"/>
         <TextBox x:Name="answer4Txtbox" HorizontalAlignment="Left" Height="33" Margin="651,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" Background="Transparent" BorderBrush="Red" FontSize="27"/>
+        <Button x:Name="returnBtn" Content="Done!" HorizontalAlignment="Left" Margin="490,514,0,0" VerticalAlignment="Top" Width="91" Height="37" Click="returnBtn_Click"/>
 
     </Grid>
 </UserControl>
