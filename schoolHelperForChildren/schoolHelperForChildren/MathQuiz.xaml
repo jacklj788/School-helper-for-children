@@ -38,6 +38,12 @@
         <Label x:Name="operator5" Content="*" HorizontalAlignment="Left" Margin="534,274,0,0" VerticalAlignment="Top" FontSize="30" Height="52"/>
         <Label x:Name="equalsLbl6" Content="=" HorizontalAlignment="Left" Margin="615,265,0,0" VerticalAlignment="Top" FontSize="30" Height="52"/>
         <TextBox x:Name="answer5Txtbox" HorizontalAlignment="Left" Height="33" Margin="651,277,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" Background="Transparent" BorderBrush="Red" FontSize="27"/>
+        <Label x:Name="num11Lbl" Content="11" HorizontalAlignment="Left" Margin="487,342,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="num12Lbl" Content="12" HorizontalAlignment="Left" Margin="565,342,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="equalsLbl6_Copy" Content="=" HorizontalAlignment="Left" Margin="615,338,0,0" VerticalAlignment="Top" FontSize="30" Height="52"/>
+        <TextBox x:Name="answer6Txtbox" HorizontalAlignment="Left" Height="33" Margin="651,349,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" Background="Transparent" BorderBrush="Red" FontSize="27"/>
+        <Label x:Name="operator6" Content="/" HorizontalAlignment="Left" Margin="535,339,0,0" VerticalAlignment="Top" FontSize="30" Height="52"/>
+        <Label x:Name="hintLbl" Content="Hint: For this question answer to 1 decimal place! (so for example, 3.5 or 1.2)." HorizontalAlignment="Left" Margin="459,401,0,0" VerticalAlignment="Top" FontSize="12" Foreground="red"/>
 
     </Grid>
 </UserControl>

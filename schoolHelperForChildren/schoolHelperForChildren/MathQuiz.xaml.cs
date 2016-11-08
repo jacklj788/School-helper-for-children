@@ -20,14 +20,14 @@ namespace schoolHelperForChildren
     {
         // There will be half as many answers as numbers - it's 1 for now but will grow, which is why its an array
         // Its in the class but outside of the constructor so all functions can access it
-        double[] answers = new double[5];
+        double[] answers = new double[6];
         public MathQuiz()
         {
             InitializeComponent();
 
             Random rnd = new Random();
             // Doubles because division might require it
-            double[] numbers = new double[10];
+            double[] numbers = new double[12];
 
             List<Label> lblList = new List<Label>();
             // Better way to do this? Don't think there is sadly. But it's better this than it was before because now I can do foreach loops
@@ -41,11 +41,14 @@ namespace schoolHelperForChildren
             lblList.Add(num8Lbl);
             lblList.Add(num9Lbl);
             lblList.Add(num10Lbl);
+            lblList.Add(num11Lbl);
+            lblList.Add(num12Lbl);
 
             // Will put this in a foreach loop later - Declares the variables as random numbers between 1 and 45. 45 is a good max number for children 
             int i = 0;
             foreach (double equationNumbers in numbers)
             {
+                // Populates the numbers
                 numbers[i] = rnd.Next(1, 45);
                 // this is the one drawback with foreach loops. Can't use [d] because it's a double not an int. 
                 i++;
@@ -58,6 +61,7 @@ namespace schoolHelperForChildren
             answers[3] = (numbers[6] - numbers[7]);
             // multiply 
             answers[4] = (numbers[8] * numbers[9]);
+            answers[5] = (numbers[10] / numbers[11]);
 
             // numLoop = makes sure it populates the next array slot each time
             int numLoop = 0;
@@ -72,7 +76,7 @@ namespace schoolHelperForChildren
         {
             // Floats werent working as float parsing was breaking, but double converting is fine. 
             // Needs to be the same as how many text boxes there are (half the numbers).
-            double[] textBoxToNumber = new double[5];
+            double[] textBoxToNumber = new double[6];
             int i = 0;
             int score = 0;
             // This is the solution to my bug. This bool makes it so ONLY the message box saying "input values in each box" OR the score pops up. Not both. 
@@ -88,6 +92,8 @@ namespace schoolHelperForChildren
                 textBoxToNumber[2] = Convert.ToDouble(answer3Txtbox.Text);
                 textBoxToNumber[3] = Convert.ToDouble(answer4Txtbox.Text);
                 textBoxToNumber[4] = Convert.ToDouble(answer5Txtbox.Text);
+                // Converts it into a 2 decimal place numbers (such as 1.5) instead of say (1.5457345834)... kids won't ever expect that, but rounding up is common. 
+                Math.Round(textBoxToNumber[5] = Convert.ToDouble(answer6Txtbox.Text), 2); 
                 only1MessageBox = false;
             }
             catch (Exception failedToConvert)
@@ -112,13 +118,13 @@ namespace schoolHelperForChildren
 
             //MessageBox.Show(String.Format("{0}", score));
             // Commented out while I debug since it gets annoying! 
-            if (score > 3)
+            if (score > 4)
             {
                 // Is there another warning message box more important?
                 if (only1MessageBox == false)
                 {
                     // If not then show the score
-                    MessageBox.Show(String.Format("You scored {0} / 5 correct!", score));
+                    MessageBox.Show(String.Format("You scored {0} / 6 correct!", score));
                 }
             }
             else
@@ -126,7 +132,7 @@ namespace schoolHelperForChildren
                 // Being designed for children so we need to watch our language tone, can't just tell them they failed, that's not reinforcing. 
                 if (only1MessageBox == false)
                 {
-                    MessageBox.Show(String.Format("You only scored {0} / 5 correct. Try again.", score));
+                    MessageBox.Show(String.Format("You only scored {0} / 6 correct. Try again.", score));
                 }
             }
         }
