@@ -32,7 +32,7 @@
         <Label x:Name="operator4" Content="-" HorizontalAlignment="Left" Margin="534,206,0,0" VerticalAlignment="Top" FontSize="30" Height="52"/>
         <Label x:Name="equalsLbl4" Content="=" HorizontalAlignment="Left" Margin="615,205,0,0" VerticalAlignment="Top" FontSize="30" Height="52"/>
         <TextBox x:Name="answer4Txtbox" HorizontalAlignment="Left" Height="33" Margin="651,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" Background="Transparent" BorderBrush="Red" FontSize="27"/>
-        <Button x:Name="returnBtn" Content="Done!" HorizontalAlignment="Left" Margin="490,514,0,0" VerticalAlignment="Top" Width="91" Height="37" Click="returnBtn_Click"/>
+        <Button x:Name="returnBtn" Content="Done!" HorizontalAlignment="Left" Margin="490,514,0,0" VerticalAlignment="Top" Width="91" Height="37" Click="returnBtn_Click" Visibility="Hidden"/>
         <Label x:Name="num9Lbl" Content="9" HorizontalAlignment="Left" Margin="490,271,0,0" VerticalAlignment="Top" FontSize="30"/>
         <Label x:Name="num10Lbl" Content="10" HorizontalAlignment="Left" Margin="565,271,0,0" VerticalAlignment="Top" FontSize="30"/>
         <Label x:Name="operator5" Content="*" HorizontalAlignment="Left" Margin="534,274,0,0" VerticalAlignment="Top" FontSize="30" Height="52"/>

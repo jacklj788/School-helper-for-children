@@ -44,12 +44,12 @@ namespace schoolHelperForChildren
             lblList.Add(num11Lbl);
             lblList.Add(num12Lbl);
 
-            // Will put this in a foreach loop later - Declares the variables as random numbers between 1 and 45. 45 is a good max number for children 
+            // Will put this in a foreach loop later - Declares the variables as random numbers between 1 and 20. 20 is a good enough number for children
             int i = 0;
             foreach (double equationNumbers in numbers)
             {
                 // Populates the numbers
-                numbers[i] = rnd.Next(1, 45);
+                numbers[i] = rnd.Next(1, 20);
                 // this is the one drawback with foreach loops. Can't use [d] because it's a double not an int. 
                 i++;
             }
@@ -125,6 +125,7 @@ namespace schoolHelperForChildren
                 {
                     // If not then show the score
                     MessageBox.Show(String.Format("You scored {0} / 6 correct!", score));
+                    returnBtn.Visibility = Visibility.Visible;
                 }
             }
             else

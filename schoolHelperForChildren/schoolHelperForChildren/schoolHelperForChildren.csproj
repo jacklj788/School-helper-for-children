@@ -60,15 +60,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="EnglishQuiz.xaml.cs">
+      <DependentUpon>EnglishQuiz.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MathQuiz.xaml.cs">
       <DependentUpon>MathQuiz.xaml</DependentUpon>
     </Compile>
     <Compile Include="SubjectSelection.xaml.cs">
       <DependentUpon>SubjectSelection.xaml</DependentUpon>
     </Compile>
-    <Compile Include="YourResult!.xaml.cs">
-      <DependentUpon>YourResult!.xaml</DependentUpon>
-    </Compile>
+    <Page Include="EnglishQuiz.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -86,10 +90,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SubjectSelection.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="YourResult!.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -129,6 +129,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\schoolDeskMath.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\schoolDeskEnglish.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

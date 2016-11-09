@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace schoolHelperForChildren
 {
     /// <summary>
-    /// Interaction logic for YourResult_.xaml
+    /// Interaction logic for EnglishQuiz.xaml
     /// </summary>
-    public partial class YourResult_ : UserControl
+    public partial class EnglishQuiz : UserControl
     {
-        public YourResult_()
+        public EnglishQuiz()
         {
             InitializeComponent();
         }

@@ -39,5 +39,11 @@ namespace schoolHelperForChildren
             MathQuiz math = new MathQuiz();
             this.Content = math;
         }
+
+        private void englishBtn_Click(object sender, RoutedEventArgs e)
+        {
+            EnglishQuiz english = new EnglishQuiz();
+            this.Content = english;
+        }
     }
 }
