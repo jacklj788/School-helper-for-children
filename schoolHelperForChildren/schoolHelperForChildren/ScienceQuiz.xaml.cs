@@ -16,16 +16,14 @@ using System.Windows.Shapes;
 namespace schoolHelperForChildren
 {
     /// <summary>
-    /// Interaction logic for EnglishQuiz.xaml
+    /// Interaction logic for ScienceQuiz.xaml
     /// </summary>
-    public partial class EnglishQuiz : UserControl
+    public partial class ScienceQuiz : UserControl
     {
-        // Using an array and not just 1 number so it can act as a switch. could technically be bools too.
-        // Otherwise if they answer it correctly but then switch their answer before submitting it will still think they got it correctly.
-        // And we can't just have the wrong answer - 1 otherwise it could confuse them as to what one is wrong. 
+
         int[] score = { 0, 0, 0, 0 };
         bool[] beenClicked = new bool[4];
-        public EnglishQuiz()
+        public ScienceQuiz()
         {
             InitializeComponent();
             int i = 0;
@@ -116,13 +114,12 @@ namespace schoolHelperForChildren
             {
                 MessageBox.Show("You got them all correct!");
                 returnBtn.Visibility = Visibility.Visible;
-                
+
             }
             else
             {
                 MessageBox.Show(String.Format("You only scored {0} / 4. Try again to get them all correct!", scoreTotal));
             }
-            // Here so that if they get it right, but then change it to wrong, then later click onto right again, it will count one to the score. 
             int i = 0;
             foreach (bool b in beenClicked)
             {

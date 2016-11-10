@@ -45,5 +45,11 @@ namespace schoolHelperForChildren
             EnglishQuiz english = new EnglishQuiz();
             this.Content = english;
         }
+
+        private void scienceBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ScienceQuiz science = new ScienceQuiz();
+            this.Content = science;
+        }
     }
 }

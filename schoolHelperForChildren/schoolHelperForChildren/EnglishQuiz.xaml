@@ -10,17 +10,17 @@
         <ImageBrush ImageSource="Images\schoolDeskEnglish.png" />
     </UserControl.Background>
     <Grid>
-        <Label x:Name="qOneLbl" Content="Q1) Should we go play at ___________ house?" HorizontalAlignment="Left" Margin="469,83,0,0" VerticalAlignment="Top" Width="215"/>
+        <Label x:Name="qOneLbl" Content="Q1) Should we go play at ___________ house?" HorizontalAlignment="Left" Margin="469,80,0,0" VerticalAlignment="Top" Width="364" FontSize="15"/>
         <Button x:Name="qOneWrongBtn" Content="you're" HorizontalAlignment="Left" Margin="524,122,0,0" VerticalAlignment="Top" Width="75" Background="AliceBlue" Click="qOneWrongBtn_Click"/>
         <Button x:Name="qOneRightBtn" Content="your" HorizontalAlignment="Left" Margin="675,122,0,0" VerticalAlignment="Top" Width="75" Background="AliceBlue" Click="qOneRightBtn_Click"/>
-        <Label x:Name="titleLbl" Content="Pick an answer to fill in the blanks!" HorizontalAlignment="Left" Margin="570,41,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="qTwoLbl" Content="Q2) Do you see that dog over ____________ ?" HorizontalAlignment="Left" Margin="469,157,0,0" VerticalAlignment="Top" Width="215"/>
+        <Label x:Name="titleLbl" Content="Pick an answer to fill in the blanks!" HorizontalAlignment="Left" Margin="512,38,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="qTwoLbl" Content="Q2) Do you see that dog over ____________ ?" HorizontalAlignment="Left" Margin="469,146,0,0" VerticalAlignment="Top" Width="364" FontSize="15"/>
         <Button x:Name="qTwoRightBtn" Content="there" HorizontalAlignment="Left" Margin="524,188,0,0" VerticalAlignment="Top" Width="75" Background="AliceBlue" Click="qTwoRightBtn_Click"/>
         <Button x:Name="qTwoWrongBtn" Content="their" HorizontalAlignment="Left" Margin="675,188,0,0" VerticalAlignment="Top" Width="75" Background="AliceBlue" Click="qTwoWrongBtn_Click"/>
-        <Label x:Name="qThreeLbl" Content="Q3) I didn't know it was _____________ toy." HorizontalAlignment="Left" Margin="469,222,0,0" VerticalAlignment="Top" Width="215"/>
+        <Label x:Name="qThreeLbl" Content="Q3) I didn't know it was _____________ toy." HorizontalAlignment="Left" Margin="469,213,0,0" VerticalAlignment="Top" Width="336" FontSize="15"/>
         <Button x:Name="qThreeRightBtn" Content="their" HorizontalAlignment="Left" Margin="524,255,0,0" VerticalAlignment="Top" Width="75" Background="AliceBlue" Click="qThreeRightBtn_Click"/>
         <Button x:Name="qThreeWrongBtn" Content="they're" HorizontalAlignment="Left" Margin="675,255,0,0" VerticalAlignment="Top" Width="75" Background="AliceBlue" Click="qThreeWrongBtn_Click"/>
-        <Label x:Name="qFourLbl" Content="Q4) _____________ is your coat?" HorizontalAlignment="Left" Margin="469,287,0,0" VerticalAlignment="Top" Width="215"/>
+        <Label x:Name="qFourLbl" Content="Q4) _____________ is your coat?" HorizontalAlignment="Left" Margin="469,280,0,0" VerticalAlignment="Top" Width="226" FontSize="15"/>
         <Button x:Name="qFourWrongBtn" Content="Were" HorizontalAlignment="Left" Margin="524,327,0,0" VerticalAlignment="Top" Width="75" Background="AliceBlue" Click="qFourWrongBtn_Click"/>
         <Button x:Name="qFourRightBtn" Content="Where" HorizontalAlignment="Left" Margin="675,327,0,0" VerticalAlignment="Top" Width="75" Background="AliceBlue" Click="qFourRightBtn_Click"/>
         <Button x:Name="submitBtn" Content="Check your Answers!" HorizontalAlignment="Left" Margin="717,512,0,0" VerticalAlignment="Top" Width="125" Height="41" Click="submitBtn_Click"/>

@@ -66,6 +66,9 @@
     <Compile Include="MathQuiz.xaml.cs">
       <DependentUpon>MathQuiz.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ScienceQuiz.xaml.cs">
+      <DependentUpon>ScienceQuiz.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SubjectSelection.xaml.cs">
       <DependentUpon>SubjectSelection.xaml</DependentUpon>
     </Compile>
@@ -86,6 +89,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MathQuiz.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ScienceQuiz.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -132,6 +139,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\schoolDeskEnglish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\schoolDeskScience.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
