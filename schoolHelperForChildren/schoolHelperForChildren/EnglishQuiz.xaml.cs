@@ -112,7 +112,22 @@ namespace schoolHelperForChildren
         private void submitBtn_Click(object sender, RoutedEventArgs e)
         {
             int scoreTotal = (score[0] + score[1] + score[2] + score[3]);
-            MessageBox.Show(String.Format("You scored {0} / 4", scoreTotal));
+            if (scoreTotal >= 4)
+            {
+                MessageBox.Show("You got them all correct!");
+                returnBtn.Visibility = Visibility.Visible;
+                
+            }
+            else
+            {
+                MessageBox.Show(String.Format("You only scored {0} / 4. Try again to get them all correct!", scoreTotal));
+            }
+        }
+
+        private void returnBtn_Click(object sender, RoutedEventArgs e)
+        {
+            SubjectSelection subject = new SubjectSelection();
+            this.Content = subject;
         }
     }
 }

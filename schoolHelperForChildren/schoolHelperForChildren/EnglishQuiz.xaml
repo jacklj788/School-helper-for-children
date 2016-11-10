@@ -23,7 +23,8 @@
         <Label x:Name="qFourLbl" Content="Q4) _____________ is your coat?" HorizontalAlignment="Left" Margin="469,287,0,0" VerticalAlignment="Top" Width="215"/>
         <Button x:Name="qFourWrongBtn" Content="Were" HorizontalAlignment="Left" Margin="524,327,0,0" VerticalAlignment="Top" Width="75" Background="AliceBlue" Click="qFourWrongBtn_Click"/>
         <Button x:Name="qFourRightBtn" Content="Where" HorizontalAlignment="Left" Margin="675,327,0,0" VerticalAlignment="Top" Width="75" Background="AliceBlue" Click="qFourRightBtn_Click"/>
-        <Button x:Name="submitBtn" Content="Check your Answers!" HorizontalAlignment="Left" Margin="717,518,0,0" VerticalAlignment="Top" Width="125" Height="41" Click="submitBtn_Click"/>
+        <Button x:Name="submitBtn" Content="Check your Answers!" HorizontalAlignment="Left" Margin="717,512,0,0" VerticalAlignment="Top" Width="125" Height="41" Click="submitBtn_Click"/>
+        <Button x:Name="returnBtn" Content="Done" HorizontalAlignment="Left" Margin="486,512,0,0" VerticalAlignment="Top" Width="75" Height="41" Visibility="Hidden" Click="returnBtn_Click"/>
 
     </Grid>
 </UserControl>
